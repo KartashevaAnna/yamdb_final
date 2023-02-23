@@ -12,18 +12,11 @@ from reviews.models import Category, Genre, Review, Title
 from users.permissions import IsMyselfOrAdmin
 
 from .filters import TitlesFilter
-from .permissions import (
-    IsAdminSuperuserOrReadOnly,
-    IsAuthorModeratorAdminSuperuserOrReadOnly,
-)
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleCreateSerializer,
-    TitleReadSerializer,
-)
+from .permissions import (IsAdminSuperuserOrReadOnly,
+                          IsAuthorModeratorAdminSuperuserOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitleCreateSerializer, TitleReadSerializer)
 
 
 @api_view(["POST"])
