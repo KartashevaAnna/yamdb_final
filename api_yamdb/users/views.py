@@ -10,7 +10,6 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
 from users.models import User
 from users.serializers import (RegistrationSerializer, TokenSerializer,
                                UserSerializer)
@@ -54,6 +53,7 @@ class UserViewSet(viewsets.ModelViewSet):
             return JsonResponse(
                 serializer.data, status=status.HTTP_204_NO_CONTENT
             )
+        return None
 
     @action(
         detail=False,
