@@ -2,26 +2,27 @@ import datetime
 
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets, status, filters, mixins, serializers
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.decorators import permission_classes, api_view
+from rest_framework import filters, mixins, serializers, status, viewsets
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 
-from reviews.models import Category, Genre, Title, Review
+from reviews.models import Category, Genre, Review, Title
 from users.permissions import IsMyselfOrAdmin
+
 from .filters import TitlesFilter
 from .permissions import (
-    IsAuthorModeratorAdminSuperuserOrReadOnly,
     IsAdminSuperuserOrReadOnly,
+    IsAuthorModeratorAdminSuperuserOrReadOnly,
 )
 from .serializers import (
+    CategorySerializer,
     CommentSerializer,
+    GenreSerializer,
     ReviewSerializer,
     TitleCreateSerializer,
     TitleReadSerializer,
-    CategorySerializer,
-    GenreSerializer,
 )
 
 

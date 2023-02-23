@@ -1,8 +1,7 @@
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
-from .models import ROLE_CHOICES
-from .models import User, USER
+from .models import ROLE_CHOICES, USER, User
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
