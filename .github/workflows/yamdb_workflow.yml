@@ -44,7 +44,8 @@ jobs:
           with:
             context: ./api_yamdb
             push: true
-            tags: annakartasheva/infra_actions:v0
+            tags: annakartasheva/api_yamdb:v0
+            file: api_yamdb/Dockerfile
 
   deploy:
       runs-on: ubuntu-latest
