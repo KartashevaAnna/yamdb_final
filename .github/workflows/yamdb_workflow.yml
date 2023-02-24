@@ -44,7 +44,7 @@ jobs:
           with:
             context: ./api_yamdb
             push: true
-            tags: annakartasheva/infra_actions:latest
+            tags: annakartasheva/infra_actions:v0
 
   deploy:
       runs-on: ubuntu-latest
