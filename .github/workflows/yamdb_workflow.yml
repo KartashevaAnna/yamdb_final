@@ -44,7 +44,7 @@ jobs:
           with:
             context: ./api_yamdb
             push: true
-            tags: annakartasheva/api_yamdb:v0
+            tags: annakartasheva/yamdb:v1
             file: api_yamdb/Dockerfile
 
   deploy:
