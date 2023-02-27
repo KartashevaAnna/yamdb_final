@@ -1,10 +1,10 @@
 ## Summary
-Here I train using Github Actions to automatically test and deploy my project at Yandex Could.
-![my badge](https://github.com/KartashevaAnna/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+Here I train using Github Actions to automatically test and deploy my project at Yandex Could. <p>
+![my badge](https://github.com/KartashevaAnna/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg) </p>
 
 ## Description
 The project is available through [admin panel](http://84.201.157.9/admin/).
-The overall project description is available at https://github.com/KartashevaAnna/api_final_yatube/blob/master/README.md.
+<p> The overall project description is available at https://github.com/KartashevaAnna/api_final_yatube/blob/master/README.md. </p>
 This is the link to the same project (without code to deploy it in docker): https://github.com/KartashevaAnna/api_final_yatube.
 
 
