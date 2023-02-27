@@ -46,6 +46,15 @@ jobs:
             push: true
             tags: annakartasheva/yamdb:v1
             file: api_yamdb/Dockerfile
+        - name: copy file via ssh password
+          uses: appleboy/scp-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            password: ${{ secrets.PASSWORD }}
+            port: ${{ secrets.PORT }}
+          source: "api_yamdb/static/redoc.yaml"
+          target: "api_yamdb/static/redoc.yaml"
 
   deploy:
       runs-on: ubuntu-latest
