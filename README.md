@@ -1,7 +1,7 @@
 # yamdb_final
 Here I train using Github Actions to automatically test and deploy my project at Yandex Could.
 
-[my badge](https://github.com/KartashevaAnna/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![my badge](https://github.com/KartashevaAnna/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 The project is available through [admin panel](http://84.201.157.9/admin/).
 
