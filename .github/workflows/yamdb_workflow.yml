@@ -53,8 +53,8 @@ jobs:
             username: ${{ secrets.USERNAME }}
             password: ${{ secrets.PASSWORD }}
             port: ${{ secrets.PORT }}
-          source: "api_yamdb/static/redoc.yaml"
-          target: "api_yamdb/static/redoc.yaml"
+            source: "api_yamdb/static/redoc.yaml"
+            target: "api_yamdb/static/redoc.yaml"
 
   deploy:
       runs-on: ubuntu-latest
