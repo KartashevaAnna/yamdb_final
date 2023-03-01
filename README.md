@@ -4,7 +4,7 @@ Here I train using Github Actions to automatically test and deploy my project at
 
 # Description
 <p>This is mainly an IP project.</p> 
-There are only two pages available in web browser: [admin panel](http://84.201.157.9/admin/) and [redoc](http://84.201.157.9/redoc/).
+There are only two pages available in web browser: ![admin panel](http://84.201.157.9/admin/) and ![redoc](http://84.201.157.9/redoc/).
 <p> The overall project description is available at https://github.com/KartashevaAnna/api_final_yatube/blob/master/README.md. </p>
 This is the link to the same project (without code to deploy it in docker): https://github.com/KartashevaAnna/api_final_yatube.
 
