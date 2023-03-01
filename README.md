@@ -65,6 +65,7 @@ Do the following on the server (in my case it's Yandex Cloud):
 - Go back to yamdb_final folder, reconnect to the server
 - Run sudo docker cp redoc.yaml CONTAINER_ID:/app/static
 - RUN sudo docker exec -it CONTAINER_ID /bin/bash and check whether the file is there (ls, cd static, ls)
+- In web browser, go to your-public-ip/admin and your-public-ip/redoc/ to check that the project is available.
 
 ### Re-deploy on the existing server
 - Re-run jobs in Github Actions or push a new version of the code
@@ -73,5 +74,6 @@ Do the following on the server (in my case it's Yandex Cloud):
 - Go back to yamdb_final folder, reconnect to the server
 - Run sudo docker cp redoc.yaml CONTAINER_ID:/app/static
 - RUN sudo docker exec -it CONTAINER_ID /bin/bash and check whether the file is there (ls, cd static, ls)
+- In web browser, go to your-public-ip/admin and your-public-ip/redoc/ to check that the project is available.
 
 
