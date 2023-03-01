@@ -3,10 +3,17 @@ Here I train using Github Actions to automatically test and deploy my project at
 ![my badge](https://github.com/KartashevaAnna/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg) </p>
 
 # Description
+<<<<<<< HEAD
 This is mainly an IP project.<p></p> 
 There are only two pages available in web browser: [admin panel](http://84.201.157.9/admin/) and [redoc](http://84.201.157.9/redoc/).<p></p>
 The overall project description is available at [project desription](https://github.com/KartashevaAnna/api_final_yatube/blob/master/README.md). <p></p>
 This is the link to the same project (without code to deploy it in docker): [local deploy](https://github.com/KartashevaAnna/api_final_yatube).
+=======
+<p>This is mainly an IP project.</p> 
+There are only two pages available in web browser: ![admin panel](http://84.201.157.9/admin/) and ![redoc](http://84.201.157.9/redoc/).
+<p> The overall project description is available at https://github.com/KartashevaAnna/api_final_yatube/blob/master/README.md. </p>
+This is the link to the same project (without code to deploy it in docker): https://github.com/KartashevaAnna/api_final_yatube.
+>>>>>>> 7be0ba8f20288a05872e2e70e84c59cb9b2ffa3b
 
 
 # Stack
