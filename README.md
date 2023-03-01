@@ -1,15 +1,15 @@
-## Summary
+# Summary
 Here I train using Github Actions to automatically test and deploy my project at Yandex Could. <p>
 ![my badge](https://github.com/KartashevaAnna/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg) </p>
 
-## Description
+# Description
 <p>This is mainly an IP project.</p> 
 There are only two pages available in web browser: [admin panel](http://84.201.157.9/admin/) and [redoc](http://84.201.157.9/redoc/).
 <p> The overall project description is available at https://github.com/KartashevaAnna/api_final_yatube/blob/master/README.md. </p>
 This is the link to the same project (without code to deploy it in docker): https://github.com/KartashevaAnna/api_final_yatube.
 
 
-## Stack
+# Stack
 - Python
 - Django
 - Django REST Framework
@@ -20,6 +20,8 @@ This is the link to the same project (without code to deploy it in docker): http
 - Nginx
 - Github actions
 
+# Deploy
+
 ## Local deploy
 - If you wish to deploy it locally, please, clone it from https://github.com/KartashevaAnna/yamdb_final.
 - Create an .env file and fill it with the data to connect to Postgres as required by the settings file.
@@ -29,6 +31,15 @@ This is the link to the same project (without code to deploy it in docker): http
 - Then you need to apply migrations: docker-compose exec web python manage.py migrate
 - After that you shall collect static: docker-compose exec web python manage.py collectstatic --no-input
 - Finally, you create a superuser and access the admin panel: docker-compose exec web python manage.py createsuperuser
+
+## Redeploy on the existing server
+- Re-run jobs in Github Actions or push a new version of the code
+- Open local terminal in yamdb_final\api_yamdb\static folder
+- RUN scp redoc.yaml name@your-public-ip:/home/name/
+- Go back to yamdb_final folder, reconnect to the server
+- Run sudo docker cp redoc.yaml CONTAINER_ID:/app/static
+- RUN sudo docker exec -it CONTAINER_ID /bin/bash and check whether the file is there (ls, cd static, ls)
+- In web browser, go to your-public-ip/admin and your-public-ip/redoc/ to check that the project is available.
 
 ## Deploy on a new server
 Do the following on the server (in my case it's Yandex Cloud):
@@ -67,14 +78,4 @@ Do the following on the server (in my case it's Yandex Cloud):
 - Run sudo docker cp redoc.yaml CONTAINER_ID:/app/static
 - RUN sudo docker exec -it CONTAINER_ID /bin/bash and check whether the file is there (ls, cd static, ls)
 - In web browser, go to your-public-ip/admin and your-public-ip/redoc/ to check that the project is available.
-
-### Re-deploy on the existing server
-- Re-run jobs in Github Actions or push a new version of the code
-- Open local terminal in yamdb_final\api_yamdb\static folder
-- RUN scp redoc.yaml name@your-public-ip:/home/name/
-- Go back to yamdb_final folder, reconnect to the server
-- Run sudo docker cp redoc.yaml CONTAINER_ID:/app/static
-- RUN sudo docker exec -it CONTAINER_ID /bin/bash and check whether the file is there (ls, cd static, ls)
-- In web browser, go to your-public-ip/admin and your-public-ip/redoc/ to check that the project is available.
-
 
